@@ -34,7 +34,7 @@ spec:
         app: aspdevops
     spec:
       containers:
-      - image: surajsnair23/dotnetsn:latest
+      - image: zedhuang/admin1
         imagePullPolicy: Always
         name: aspdevops
         ports:
