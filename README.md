@@ -49,20 +49,6 @@ kubectl get svc
 Once the springboot external IP is generated, we need to follow the below steps
 
 An improtant part of the project is to hit the 'springboot' external API with /initPlaylist [POST] for initial playlists to load
-
-Step into local Admin app, and follow the below steps to edit JS file with springboot API and Build/Containerize app
-This is the only manual step where our JavaScript file could not resolve service names
-```bash
-delete out and publish folders
-cd D:\Courseware\MIS at NEU\<>\dotnetAdmin\adminApp\wwwroot\js
-EDIT the file, with spring-boot IP as generated check 'kubectl get svc'
-dotnet build
-dotnet publish -o out
-cd ..
-docker build -t <dockername/repo> .
-docker push <dockername/repo>
-cd into deployments_services run:
-kubectl apply -f dotnet-app.yml 
 ```
 
 ## Final set up for Grapfana and Promethues
